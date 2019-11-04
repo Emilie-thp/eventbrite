@@ -15,4 +15,10 @@ class Event < ApplicationRecord
 	has_many :users, through: :attendances
 	belongs_to :admin, class_name: "User"
 
+	def multiple_of_5
+      if (self.duration % 5) != 0
+      self.errors[:base] << "Number must be divisible by 5!"
+      end
+	end
+
 end

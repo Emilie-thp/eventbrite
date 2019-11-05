@@ -2,6 +2,6 @@ Rails.application.routes.draw do
   
   root 'events#index'
 
-  ressources :events
+  resources :events
 
 end

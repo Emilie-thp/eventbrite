@@ -14,7 +14,10 @@ class UserMailer < ApplicationMailer
 
   def inscription_event(attendance)
   	@attendance = attendance
-  	@url = 'https://eventbrute.herokuapp.com/'
+
+  	@admin = attendance.event.admin
+    
+    @url = 'https://eventbrute.herokuapp.com/'
 
     mail(to: @attendance.event.admin.email, subject: 'Une nouvelle inscription à votre event !') 
 

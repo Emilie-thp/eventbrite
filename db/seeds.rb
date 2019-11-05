@@ -6,13 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-20.times do |x|
+User.destroy_all
+Event.destroy_all
+Attendance.destroy_all
+
+5.times do |x|
   fname = Faker::Name.first_name
   User.create(
 	  description: Faker::Quote.famous_last_words, 
     first_name: fname,
     last_name: Faker::Name.last_name,
-	  email: fname + "@yopmail.com")
+	  email: fname + "@yopmail.com",
+    encrypted_password: Faker::Internet.password)
     puts "Seeding of User nb #{x}"
 end 
 

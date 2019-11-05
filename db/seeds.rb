@@ -39,7 +39,7 @@ t2 = Time.parse("2022-01-01 00:00:00")
 end
 
 20.times do |x|
-   Attendance.create(
+  Attendance.create(
     user: User.all.sample,
     event: Event.all.sample)
   puts "Seeding of Guest nb #{x}"

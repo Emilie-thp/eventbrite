@@ -1,3 +1,13 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotron {
+	background-image: url("https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+	background-size: contain;
+	margin-left: 0px;
+	margin-bottom: 0px;
+ 	height: 300px;
+ 	color: white; /* Le texte sera affiché en blanc */
+ 	text-shadow: black 0.3em 0.3em 0.3em;
+ 	}

@@ -10,14 +10,14 @@ User.destroy_all
 Event.destroy_all
 Attendance.destroy_all
 
-5.times do |x|
+15.times do |x|
   fname = Faker::Name.first_name
   User.create(
 	  description: Faker::Quote.famous_last_words, 
     first_name: fname,
     last_name: Faker::Name.last_name,
 	  email: fname + "@yopmail.com",
-    encrypted_password: Faker::Internet.password)
+    password: 'azerty')
     puts "Seeding of User nb #{x}"
 end 
 
@@ -26,7 +26,7 @@ end
 t1 = Time.parse("2019-11-01 20:40:34")
 t2 = Time.parse("2022-01-01 00:00:00")
 
-2.times do |x|
+5.times do |x|
     Event.create(
     start_date: rand(t1..t2),
     duration: rand(5..100)*5,
@@ -34,7 +34,7 @@ t2 = Time.parse("2022-01-01 00:00:00")
     location: Faker::Address.city,
     price: rand(1..1000),
     title: Faker::Book.title,
-    admin_id: User.all.sample.id)
+    admin: User.all.sample)
   puts "Seeding of Event nb #{x}"
 end
 

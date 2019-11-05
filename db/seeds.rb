@@ -35,7 +35,7 @@ end
 
 20.times do |x|
    Attendance.create(
-    user_id: User.all.sample.id,
-    event_id: Event.all.sample.id)
+    user: User.all.sample,
+    event: Event.all.sample)
   puts "Seeding of Guest nb #{x}"
 end
